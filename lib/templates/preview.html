@@ -1,0 +1,36 @@
+<style>
+    .swp-preview {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 5000;
+        background-color: rgba(0,0,0,.95)
+    }
+    .swp-preview-page-wrap {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+    }
+    .swp .swp-page.swp-preview-page img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate3d(-50%, -50%, 0);
+        -webkit-transform: translate3d(-50%, -50%, 0);
+    }
+</style>
+
+<ul class="swp js-swp-wrap">
+    <% imgObjs.forEach(function(item){%>
+    <li class="swp-page swp-preview-page">
+        <div class="swp-preview-page-wrap">
+            <img class="swp-img" src="<%= item.src %>">
+        </div>
+    </li>
+    <% }) %>
+</ul>
