@@ -6,6 +6,8 @@ const setElementsStyles = (elems, styles) => {
   })
 }
 
+const transformKey = '-webkit-transform'
+
 function Scroll(wrapElem, options) {
   EventEmitter.apply(this, arguments);
   this.wrapElem = wrapElem;
@@ -50,7 +52,7 @@ extend(Scroll.prototype, {
       width: '100%',
       height: '100%',
       display: 'block',
-      '-webkit-transform': 'translate3d(-9999px, 0, 0)'
+      [transformKey]: 'translate3d(-9999px, 0, 0)'
     };
     setElementsStyles(this.pages, defaultStyle);
     this.mCache = {
@@ -73,16 +75,16 @@ extend(Scroll.prototype, {
 
     page = this.getCurrentPage();
     if (page) {
-      page.style['-webkit-transform'] = 'translate3d(' + offset + 'px, 0, 0)';
+      page.style[transformKey] = 'translate3d(' + offset + 'px, 0, 0)';
     }
 
     leftPage = this.pages[this.mapLoopPage(currentOffsetPage - 1)];
     if (leftPage) {
       if (Math.abs(leftOffset) <= wrapWidth) {
-        leftPage.style['-webkit-transform'] = 'translate3d(' + leftOffset + 'px, 0, 0)';
+        leftPage.style[transformKey] = 'translate3d(' + leftOffset + 'px, 0, 0)';
       } else {
         if (this.pages.length > 2) {
-          leftPage.style['-webkit-transform'] = 'translate3d(-9999px, 0, 0)';
+          leftPage.style[transformKey] = 'translate3d(-9999px, 0, 0)';
         }
       }
     }
@@ -90,10 +92,10 @@ extend(Scroll.prototype, {
     rightPage = this.pages[this.mapLoopPage(currentOffsetPage + 1)];
     if (rightPage) {
       if (Math.abs(rightOffset) <= wrapWidth) {
-        rightPage.style['-webkit-transform'] = 'translate3d(' + rightOffset + 'px, 0, 0)';
+        rightPage.style[transformKey] = 'translate3d(' + rightOffset + 'px, 0, 0)';
       } else {
         if (this.pages.length > 2) {
-          rightPage.style['-webkit-transform'] = 'translate3d(-9999px, 0, 0)';
+          rightPage.style[transformKey] = 'translate3d(-9999px, 0, 0)';
         }
       }
     }
