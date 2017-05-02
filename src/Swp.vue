@@ -5,7 +5,6 @@
 </template>
 
 <script>
-  import './swp.scss'
   import Input from './input'
   import Scroll from './scroll'
   import SpringDummy from './spring_dummy'
@@ -50,3 +49,28 @@
     }
   }
 </script>
+
+<style lang="scss">
+.swp {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    .swp-page {
+        display: none;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        text-align: center;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        &:first-child {
+            display: block;
+        }
+    }
+}
+</style>

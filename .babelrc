@@ -1,4 +1,7 @@
 {
-  "presets": ["es2015"],
-  "plugins": ["transform-vue-jsx"]
+  "presets": [
+    ["latest", {
+      "es2015": { "modules": false }
+    }]
+  ]
 }

@@ -4,8 +4,6 @@ ecmaFeatures:
 rules:
   indent: [ 1, 2, SwitchCase: 1 ]
   quotes: [ 1, single ]
-  linebreak-style: [ 1, unix ]
-  semi: [ 1, always ]
   no-undef: [ 1 ]
   no-console: [ 0 ]
   no-unused-vars: [ 1 ]
