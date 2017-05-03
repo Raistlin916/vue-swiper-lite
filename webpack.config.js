@@ -8,7 +8,8 @@ if (process.env.NODE_ENV === 'example') {
     entry: './src/main.js',
     output: {
       path: path.resolve(__dirname, './dist'),
-      filename: 'index.js'
+      filename: 'index.js',
+      libraryTarget: 'umd'
     },
     module: {
       rules: [{
