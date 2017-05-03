@@ -7,6 +7,10 @@
     "build": "webpack --progress --hide-modules",
     "deploy": "NODE_ENV=example webpack --progress --hide-modules && gh-pages -d example/dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raistlin916/vue-swiper-lite.git"
+  },
   "keywords": [
     "vue",
     "vue swiper",
@@ -15,6 +19,7 @@
   "files": [
     "dist"
   ],
+  "homepage": "https://github.com/Raistlin916/vue-swiper-lite",
   "author": "gaok",
   "license": "ISC",
   "devDependencies": {
