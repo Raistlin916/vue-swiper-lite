@@ -21,6 +21,11 @@
       }
     },
     mounted() {
+      const pages = this.$el.querySelectorAll('.swp-page')
+      if (pages.length <= 1) {
+        return
+      }
+
       this.input = new Input(this.$el, {
         listenMoving: true
       })

@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack --progress --hide-modules",
+    "dev": "NODE_ENV=example webpack --progress --hide-modules --watch",
     "deploy": "NODE_ENV=example webpack --progress --hide-modules && gh-pages -d example/dist"
   },
   "repository": {
